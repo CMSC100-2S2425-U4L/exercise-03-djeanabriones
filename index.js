@@ -1,3 +1,4 @@
+//function to reverse password
 function checkReverse(password) {
     var splitString = password.split("");
     var reverseArray = splitString.reverse();
@@ -5,6 +6,7 @@ function checkReverse(password) {
     return joinArray;
 }
 
+//function to store password to a user object
 function storePassword(name, password, input) {
 
     let newPass
@@ -25,21 +27,30 @@ function storePassword(name, password, input) {
     }
 }
 
+//function to validate password
 function validatePassword(password, input) {
 
-    let pattern = new RegExp("^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d).+$")
+    var errors = []
 
-    if (password === input && input.length > 7 && pattern.test(input)) {
+    if (password.search(/[a-z]/) < 0) {
+        errors.push("Your password must contain at least one lowercase letter.")
+    }
+    if (password.search(/[A-Z]/) < 0) {
+        errors.push("Your password must contain at least one uppercase letter.")
+    }
+    if (password.search(/[0-9]/) < 0) {
+        errors.push("Your password must contain at least one digit.")
+    }
+
+    if (password === input && input.length > 7 && errors.length === 0) {
         return true;
     } else {
         return false;
     }
-
-    // if(inputlen!=pwlen){
-    //     return false;
-    // }
 }
 
+
+//test run
 console.log(validatePassword("helloworld", "hello"))
 console.log(validatePassword("hello", "hello"))
 console.log(validatePassword("hello1234", "hello1234"))
