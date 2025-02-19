@@ -14,7 +14,7 @@ I found it difficult to do the part where we should validate whether the passwor
 
 ## Solutions
 
-I found a solution online where we can use the RegExp.
+I found a solution online where we can use the search function to check if the password contains the needed characters.
 
 ## References
 
