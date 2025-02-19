@@ -18,6 +18,6 @@ I found a solution online where we can use the search function to check if the p
 
 ## References
 
-- https://www.geeksforgeeks.org/javascript-program-to-check-if-a-string-contains-uppercase-lowercase-special-characters-and-numeric-values/
+- https://stackoverflow.com/questions/34837040/form-password-validation-without-using-regex
 - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/length
 - https://www.freecodecamp.org/news/how-to-reverse-a-string-in-javascript-in-3-different-ways-75e4763c68cb/
